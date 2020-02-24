@@ -1,0 +1,13 @@
+h1{
+    color: white;
+}
+
+.linkBtn{
+    background-color: transparent;
+    border: none;
+    color: orange;
+}
+
+.sesion-btn{
+    text-align: right;
+}

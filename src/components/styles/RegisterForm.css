@@ -1,0 +1,42 @@
+.container{
+    margin-top: 5%;
+}
+
+.tittle{
+    text-align: center;
+}
+
+.formregister{
+    /*border-radius: 25px;*/
+    background-color: whitesmoke;
+    border: 2px solid orange;
+    padding: 20px;
+}
+
+.image{
+    height: 220px;
+}
+
+h4, h5{
+    color: black
+}
+
+.form-group{
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 100%;
+}
+
+.btna{
+    justify-content: center;
+}
+
+.buttonb{
+    width: 150px;
+}
+
+.link{
+    background-color: transparent;
+    border: none;
+    color: orange;
+}

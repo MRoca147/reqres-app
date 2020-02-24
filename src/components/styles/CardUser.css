@@ -1,0 +1,13 @@
+.card {
+    margin-top: 5px;
+    border: none;
+    border-radius: 8px;
+}
+
+.User-Card{
+    max-width: 100%;
+}
+
+.User-Card-Info h5{
+    color: black;
+}
