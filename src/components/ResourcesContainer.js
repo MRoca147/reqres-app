@@ -54,7 +54,7 @@ const ResourcesContainer = () =>{
             }
             let res = await fetch(`${url}/users/2`, config)
             let js = res.json()
-            alert('Usuario actualizado con exito')
+            alert('Resource updated')
             console.log(js)
         }catch(error){
             alert('Un error a ocurrido')
