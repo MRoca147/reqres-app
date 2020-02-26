@@ -2,9 +2,10 @@ import React, { Fragment } from 'react';
 import '../components/styles/resources.css'
 import Title from '../components/Title';
 import ListResources from '../components/ListResources';
+import ResourcesForm from '../components/ResourcesForm';
 import { Link } from 'react-router-dom';
 
-const Resources = ({data}) => (
+const Resources = ({data, form, onChange, onSubmit, onUpdate}) => (
     <Fragment>
         <div className="row">
             <div className="col-md-4">
@@ -23,7 +24,11 @@ const Resources = ({data}) => (
         </div>
         <div className="row">
             <div className="col-md-6">
-            <h1>Form Create & Update resources</h1>
+                <ResourcesForm 
+                form={form}
+                onChange={onChange}
+                onSubmit={onSubmit}
+                onUpdate={onUpdate}/>
             </div>
             <div className="col-md-6">
                 <ListResources resources={data}/>

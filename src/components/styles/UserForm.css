@@ -1,9 +1,9 @@
 
-.container{
-    margin-top: 5%;
+.container-user{
+    margin-top: 5px;
 }
 
-.formlogin{
+.formuser{
     /*border-radius: 25px;*/
     background-color: whitesmoke;
     border: 2px solid orange;
@@ -15,7 +15,11 @@
 }
 
 .h5{
-    color: white
+    color: black;
+}
+
+.p{
+    color: black;
 }
 
 .form-group{
@@ -29,15 +33,6 @@
 }
 
 .buttonb{
-    width: 150px;
-}
-
-.link{
-    padding-left: 50px;
-}
-
-.linkBtn{
-    background-color: transparent;
-    border: none;
-    color: orange;
+    width: 120px;
+    margin: 10px;
 }

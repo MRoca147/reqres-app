@@ -18,25 +18,29 @@ const LoginContainer = ({history}) =>{
     const handleSubmit = async e =>{
         e.preventDefault()
         try{
-            let config = {
-                method: 'POST',
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(form)
-            }
-            let res = await fetch(`${url}/login`, config)
-            let js = res.json()
-            let value = await js.valueOf(js)
-            let token = value.token
-            if(res.status === 200){
-                console.log(token)
-                if(localStorage.getItem('token') == token){
-                    history.push('/user')
-                }
+            if(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(form.email) === false){
+                alert('Write a valid email')
             }else{
-                alert('Usuario o contraseña incorrecto')
+                let config = {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(form)
+                }
+                let res = await fetch(`${url}/login`, config)
+                let js = res.json()
+                let value = await js.valueOf(js)
+                let token = value.token
+                if(res.status === 200){
+                    console.log(token)
+                    if(localStorage.getItem('token') === token){
+                        history.push('/user')
+                    }
+                }else{
+                    alert('Usuario o contraseña incorrecto')
+                }
             }
         }catch(error){
             alert('Un error a ocurrido')

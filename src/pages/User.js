@@ -2,9 +2,10 @@ import React, { Fragment } from 'react';
 import '../components/styles/user.css';
 import Title from '../components/Title';
 import ListUsers from '../components/ListUsers';
+import UserForm from '../components/UserForm';
 import { Link } from 'react-router-dom';
 
-const User = ({data}) => (
+const User = ({data, form, onChange, onSubmit, onUpdate}) => (
     <Fragment>
         <div className="row">
             <div className="col-md-4">
@@ -23,7 +24,11 @@ const User = ({data}) => (
         </div>
         <div className="row">
             <div className="col-md-6">
-                <h1>Form Create & Update users</h1>
+                <UserForm 
+                form={form}
+                onChange={onChange}
+                onSubmit={onSubmit}
+                onUpdate={onUpdate}/>
             </div>
             <div className="col-md-6">
                 <ListUsers users={data}/>
